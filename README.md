@@ -4,247 +4,56 @@
 [![Version][npm-image]][npm-url] [![Travis CI][travis-image]][travis-url] [![Quality][codeclimate-image]][codeclimate-url] [![Coverage][codeclimate-coverage-image]][codeclimate-coverage-url] [![Dependencies][gemnasium-image]][gemnasium-url] [![Gitter][gitter-image]][gitter-url]
 
 
-## Under development for [v6.0.0](https://github.com/tomchentw/react-google-maps/issues/318)
-
-Try it via:
-
-```sh
-npm install --save react-google-maps@beta
-```
+## [Introduction](https://tomchentw.github.io/react-google-maps/#introduction)
 
 
-## Call for maintainers
-
-As the author ([tomchentw][tomchentw]) currently doesn't actively use this module, he's looking for awesome contributors to help and keep the community healthy. Please don't hesitate to [contact him][tomchentw] directly. See [#266][call-for-maintainers] for more information.
+## [Installation](https://tomchentw.github.io/react-google-maps/#installation)
 
 
-## Documentation
+## [Usage & Configuration](https://tomchentw.github.io/react-google-maps/#usage--configuration)
 
-Basically just a simple wrapper around [Google Maps Javascript API][Google Maps Javascript API]. Also check out the [demo][demo] app and it's source under [src/app][src_app] folder.
 
-**Note**: this doc is under development for [v6.0.0](https://github.com/tomchentw/react-google-maps/issues/318). Find docs for [v5.x][docs_v5] and [v4.x][docs_v4] with the git tags.
+## [Changelog][changelog-url]
 
-### withGoogleMap
+The changelog is automatically generated via [standard-version][standard-version] and can be found in project root as well as npm tarball.
 
-```jsx
-import { withGoogleMap } from "react-google-maps";
 
-// Wrap all `react-google-maps` components with `withGoogleMap` HOC
-// and name it GettingStartedGoogleMap
-const GettingStartedGoogleMap = withGoogleMap(props => (
-  <GoogleMap
-    ref={props.onMapLoad}
-    defaultZoom={3}
-    defaultCenter={{ lat: -25.363882, lng: 131.044922 }}
-    onClick={props.onMapClick}
-  >
-    {props.markers.map((marker, index) => (
-      <Marker
-        {...marker}
-        onRightClick={() => props.onMarkerRightClick(index)}
-      />
-    ))}
-  </GoogleMap>
-));
-// Then, render it:
-render(
-  <GettingStartedGoogleMap
-    containerElement={
-      <div style={{ height: `100%` }} />
-    }
-    mapElement={
-      <div style={{ height: `100%` }} />
-    }
-    onMapLoad={_.noop}
-    onMapClick={_.noop}
-    markers={markers}
-    onMarkerRightClick={_.noop}
-  />,
-  document.getElementById('root')
-);
-```
+## [Demo App][demo-app-url]
 
-### GoogleMap
+[Source code][demo-app-source]
 
-```jsx
-<GoogleMap
-  onClick={_.noop}
-  onRightClick={_.noop}
-  onDragStart={_.noop}
-/>
-```
 
-### Marker
+## Getting Help
 
-```jsx
-<Marker
-  onClick={_.noop}
-  onRightClick={_.noop}
-  onDragStart={_.noop}
-/>
-```
+**Before doing this, did you**:
 
-### Circle
+1. Read the [documentation](https://tomchentw.github.io/react-google-maps)
+2. Read the [source code](https://github.com/tomchentw/react-google-maps)
 
-```jsx
-<Circle
-  onClick={_.noop}
-  onRightClick={_.noop}
-  onDragStart={_.noop}
-/>
-```
 
-### Rectangle
+_You can get someone's help in three ways_:
 
-```jsx
-<Rectangle
-  onClick={_.noop}
-  onRightClick={_.noop}
-  onDragStart={_.noop}
-/>
-```
+1. Ask on StackOverflow [with a google-maps tag](https://stackoverflow.com/questions/tagged/google-maps?sort=votes&pageSize=50) or [use react-google-maps as a keyword](https://stackoverflow.com/search?q=react-google-maps)
+2. Ask in [the chat room][gitter-url]
+3. Create a Pull Request with your solutions to your problem
 
-### Polyline
+Please, be noted, **no one**, I mean, **no one**, is obligated to help you in **ANY** means. Your time is valuable, so does our contributors. Don't waste our time posting questions like “how do I do X with React-Google-Maps” and “my code doesn't work”. This is not the primary purpose of the issue tracker. Don't abuse.
 
-```jsx
-<Polyline
-  onClick={_.noop}
-  onRightClick={_.noop}
-  onDragStart={_.noop}
-/>
-```
 
-### Polygon
+## For contributors
 
-```jsx
-<Polygon
-  onClick={_.noop}
-  onRightClick={_.noop}
-  onDragStart={_.noop}
-/>
-```
+<details>
+  <summary>Some simple guidelines</summary>
 
-### KmlLayer
+* **Don't** manually modify `lib` folder. They're generated during `yarn release` process
+* Follow [conventional-commits-specification][conventional-commits-specification]
+* [standard-version][standard-version]
+* Auto generated: `src/macros` -> `src/components` -> `lib/components`
+* Other components are manually maintained
+* Use `yarn` and keep `yarn.lock` updated in PR
+* Discuss! Discuss! Discuss!
 
-```jsx
-<KmlLayer
-  onClick={_.noop}
-  onDefaultViewportChanged={_.noop}
-  onStatusChanged={_.noop}
-/>
-```
-
-### InfoWindow
-
-```jsx
-<InfoWindow
-  onCloseClick={_.noop}
-  onDomReady={_.noop}
-  onZIndexChanged={_.noop}
-/>
-```
-
-### drawing/DrawingManager
-
-```jsx
-<DrawingManager
-  onCircleComplete={_.noop}
-  onOverlayComplete={_.noop}
-/>
-```
-
-### places/SearchBox
-
-```jsx
-<SearchBox
-  inputPlaceholder="Customized your placeholder"
-  inputStyle={INPUT_STYLE}
-/>
-```
-
-### addons/MarkerClusterer
-
-```jsx
-<MarkerClusterer
-  onClusteringBegin={_.noop}
-  onMouseOut={_.noop}
-/>
-```
-
-### addons/InfoBox
-
-```jsx
-<InfoBox
-  onCloseClick={_.noop}
-  onDomReady={_.noop}
-  onZIndexChanged={_.noop}
-/>
-```
-
-### async/withScriptjs
-
-```jsx
-import { withGoogleMap } from "react-google-maps";
-import withScriptjs from "react-google-maps/lib/async/withScriptjs";
-
-// Wrap all `react-google-maps` components with `withGoogleMap` HOC
-// then wraps it into `withScriptjs` HOC
-// It loads Google Maps JavaScript API v3 for you asynchronously.
-// Name the component AsyncGettingStartedExampleGoogleMap
-const AsyncGettingStartedExampleGoogleMap = withScriptjs(
-  withGoogleMap(
-    props => (
-    <GoogleMap
-      ref={props.onMapLoad}
-      defaultZoom={3}
-      defaultCenter={{ lat: -25.363882, lng: 131.044922 }}
-      onClick={props.onMapClick}
-    >
-      {props.markers.map(marker => (
-        <Marker
-          {...marker}
-          onRightClick={() => props.onMarkerRightClick(marker)}
-        />
-      ))}
-    </GoogleMap>
-  )
-);
-// Then, render it:
-render(
-  <AsyncGettingStartedExampleGoogleMap
-    googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp"
-    loadingElement={
-      <div style={{ height: `100%` }}>
-        <FaSpinner
-          style={{
-            display: `block`,
-            width: `80px`,
-            height: `80px`,
-            margin: `150px auto`,
-            animation: `fa-spin 2s infinite linear`,
-          }}
-        />
-      </div>
-    }
-    containerElement={
-      <div style={{ height: `100%` }} />
-    }
-    mapElement={
-      <div style={{ height: `100%` }} />
-    }
-    onMapLoad={_.noop}
-    onMapClick={_.noop}
-    markers={markers}
-    onMarkerRightClick={_.noop}
-  />,
-  document.getElementById('root')
-);
-```
-
-## Changelog
-
-The changelog is automatically generated via [conventional-changelog][conventional-changelog] and [can be found in project root](https://github.com/tomchentw/react-google-maps/blob/master/CHANGELOG.md) as well as npm tarball.
-
+</details>
 
 
 [npm-image]: https://img.shields.io/npm/v/react-google-maps.svg?style=flat-square
@@ -261,12 +70,9 @@ The changelog is automatically generated via [conventional-changelog][convention
 [gitter-image]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/tomchentw/react-google-maps?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
+[changelog-url]: https://github.com/tomchentw/react-google-maps/blob/master/CHANGELOG.md
+[demo-app-url]: https://tomchentw.github.io/#/demos/react-google-maps
+[demo-app-source]: https://github.com/tomchentw/tomchentw.github.io/blob/master/src/Pages/Demos/ReactGoogleMaps.jsx
 
-[tomchentw]: https://github.com/tomchentw
-[call-for-maintainers]: https://github.com/tomchentw/react-google-maps/issues/266
-[demo]: https://tomchentw.github.io/react-google-maps/
-[src_app]: https://github.com/tomchentw/react-google-maps/tree/master/src/app
-[Google Maps Javascript API]: https://developers.google.com/maps/documentation/javascript/
-[conventional-changelog]: https://github.com/ajoslin/conventional-changelog
-[docs_v5]: https://github.com/tomchentw/react-google-maps/tree/v5.1.0#documentation
-[docs_v4]: https://github.com/tomchentw/react-google-maps/tree/v4.11.0#documentation
+[standard-version]: https://github.com/conventional-changelog/standard-version
+[conventional-commits-specification]: https://conventionalcommits.org/

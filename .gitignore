@@ -2,6 +2,7 @@
 
 ### Editor
 *.swp
+.idea
 
 ### Node ###
 # Logs
@@ -12,6 +13,7 @@ logs
 pids
 *.pid
 *.seed
+.cache
 
 # OSX
 .DS_Store
