@@ -80,6 +80,34 @@ export class Map extends React.PureComponent {
     return this.context[MAP].panToBounds(...args)
   }
 
+  setCenter(...args) {
+    return this.context[MAP].setCenter(...args)
+  }
+
+  setHeading(...args) {
+    return this.context[MAP].setHeading(...args)
+  }
+
+  setMapTypeId(...args) {
+    return this.context[MAP].setMapTypeId(...args)
+  }
+
+  setOptions(...args) {
+    return this.context[MAP].setOptions(...args)
+  }
+
+  setStreetView(...args) {
+    return this.context[MAP].setStreetView(...args)
+  }
+
+  setTilt(...args) {
+    return this.context[MAP].setTilt(...args)
+  }
+
+  setZoom(...args) {
+    return this.context[MAP].setZoom(...args)
+  }
+
   /*
    * @see https://developers.google.com/maps/documentation/javascript/3.exp/reference#Map
    */
