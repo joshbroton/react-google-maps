@@ -49649,6 +49649,55 @@ object-assign
                 return (e = this.context[c.l]).panToBounds.apply(e, arguments)
               },
             },
+            {
+              key: "setCenter",
+              value: function setCenter() {
+                var e
+                return (e = this.context[c.l]).setCenter.apply(e, arguments)
+              },
+            },
+            {
+              key: "setHeading",
+              value: function setHeading() {
+                var e
+                return (e = this.context[c.l]).setHeading.apply(e, arguments)
+              },
+            },
+            {
+              key: "setMapTypeId",
+              value: function setMapTypeId() {
+                var e
+                return (e = this.context[c.l]).setMapTypeId.apply(e, arguments)
+              },
+            },
+            {
+              key: "setOptions",
+              value: function setOptions() {
+                var e
+                return (e = this.context[c.l]).setOptions.apply(e, arguments)
+              },
+            },
+            {
+              key: "setStreetView",
+              value: function setStreetView() {
+                var e
+                return (e = this.context[c.l]).setStreetView.apply(e, arguments)
+              },
+            },
+            {
+              key: "setTilt",
+              value: function setTilt() {
+                var e
+                return (e = this.context[c.l]).setTilt.apply(e, arguments)
+              },
+            },
+            {
+              key: "setZoom",
+              value: function setZoom() {
+                var e
+                return (e = this.context[c.l]).setZoom.apply(e, arguments)
+              },
+            },
           ]),
           p(Map, [
             {
@@ -49673,7 +49722,18 @@ object-assign
               key: "render",
               value: function render() {
                 var e = this.props.children
-                return s.a.createElement("div", null, e)
+                return s.a.createElement(
+                  "div",
+                  {
+                    __source: {
+                      fileName:
+                        "/Users/joshbroton/dev/basin/react-google-maps/src/components/GoogleMap.jsx",
+                      lineNumber: 301,
+                    },
+                    __self: this,
+                  },
+                  e
+                )
               },
             },
             {
@@ -50564,7 +50624,18 @@ object-assign
               key: "render",
               value: function render() {
                 var e = this.props.children
-                return i.a.createElement("div", null, e)
+                return i.a.createElement(
+                  "div",
+                  {
+                    __source: {
+                      fileName:
+                        "/Users/joshbroton/dev/basin/react-google-maps/src/components/Marker.jsx",
+                      lineNumber: 340,
+                    },
+                    __self: this,
+                  },
+                  e
+                )
               },
             },
             {
@@ -51752,7 +51823,18 @@ object-assign
               key: "render",
               value: function render() {
                 var e = this.props.children
-                return s.a.createElement("div", null, e)
+                return s.a.createElement(
+                  "div",
+                  {
+                    __source: {
+                      fileName:
+                        "/Users/joshbroton/dev/basin/react-google-maps/src/components/StreetViewPanorama.jsx",
+                      lineNumber: 200,
+                    },
+                    __self: this,
+                  },
+                  e
+                )
               },
             },
             {
@@ -52380,7 +52462,18 @@ object-assign
               key: "render",
               value: function render() {
                 var e = this.props.children
-                return i.a.createElement("div", null, e)
+                return i.a.createElement(
+                  "div",
+                  {
+                    __source: {
+                      fileName:
+                        "/Users/joshbroton/dev/basin/react-google-maps/src/components/addons/MarkerClusterer.jsx",
+                      lineNumber: 267,
+                    },
+                    __self: this,
+                  },
+                  e
+                )
               },
             },
           ]),
@@ -53989,7 +54082,8 @@ object-assign
       d = n("./node_modules/react/index.js"),
       f = n.n(d),
       h = n("./src/constants.js"),
-      m = (function() {
+      m = "/Users/joshbroton/dev/basin/react-google-maps/src/withGoogleMap.jsx",
+      g = (function() {
         function defineProperties(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n]
@@ -54033,7 +54127,7 @@ object-assign
           }
           return (
             _inherits(Container, f.a.PureComponent),
-            m(Container, [
+            g(Container, [
               {
                 key: "getChildContext",
                 value: function getChildContext() {
@@ -54080,13 +54174,23 @@ object-assign
                         n,
                         {},
                         f.a.cloneElement(r, { ref: this.handleComponentMount }),
-                        f.a.createElement("div", null, t(o))
+                        f.a.createElement(
+                          "div",
+                          {
+                            __source: { fileName: m, lineNumber: 75 },
+                            __self: this,
+                          },
+                          t(o)
+                        )
                       )
                     : f.a.cloneElement(
                         n,
                         {},
                         f.a.cloneElement(r, { ref: this.handleComponentMount }),
-                        f.a.createElement("div", null)
+                        f.a.createElement("div", {
+                          __source: { fileName: m, lineNumber: 84 },
+                          __self: this,
+                        })
                       )
                 },
               },
