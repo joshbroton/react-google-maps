@@ -50194,8 +50194,7 @@ object-assign
                 )
                   return (
                     this.state[m.j].setContent(this.containerElement),
-                    b(this.state[m.j], this.context[m.a]),
-                    void (this.containerElement = void 0)
+                    void b(this.state[m.j], this.context[m.a])
                   )
                 var e = document.createElement("div")
                 p.a.unstable_renderSubtreeIntoContainer(
